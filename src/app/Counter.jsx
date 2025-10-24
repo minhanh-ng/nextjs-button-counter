@@ -9,6 +9,8 @@ export default function Counter() {
             <button id="add-button" onClick={() => setCount(count + 1)}>Add Sale</button>
             <br></br>
             <button id="delete-button" onClick={() => setCount(count - 1)}>Delete Sale</button>
+            <br></br>
+            <button id="reset-button" onClick={() => setCount(0)}>Reset Sale</button>
         </div>
     
     );
