@@ -1,18 +1,23 @@
 'use client';
 import {useState} from 'react';
-export default function Counter() {
-    const [count, setCount] = useState(0);
+export default function Counter({initialCount=0, initialStep=1}) {
+    const [count, setCount] = useState(initialCount);
+    const [step, setStep] = useState(initialStep);
 
     return (
         <div>
             <p>Current Sales Count: {count}</p>
-            <button id="add-button" onClick={() => setCount(count + 1)}>Add Sale</button>
-            <br></br>
-            <button id="delete-button" onClick={() => setCount(count - 1)}>Delete Sale</button>
-            <br></br>
-            <button id="reset-button" onClick={() => setCount(0)}>Reset Sale</button>
+            <button id="add-button" onClick={() => setCount(count + 1)}>Add Sale</button><br />
+            
+            <button id="delete-button" onClick={() => setCount(count - 1)}>Delete Sale</button><br />
+            
+            <button id="reset-button" onClick={() => setCount(0)}>Reset Sale</button><br />
+           
+            <label> Step
+                <input type="number"
+                value={step}
+                onChange={(e) => setStep(Number(e.target.value))} />
+            </label>
         </div>
-    
     );
-
 }
