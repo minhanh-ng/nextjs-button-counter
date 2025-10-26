@@ -10,7 +10,7 @@ export default function Counter({initialCount=0, initialStep=1}) {
             <p aria-live="polite">Current Sales Count: {count}</p>
             <button id="add-button" onClick={() => setCount(count + step)}>Add Sale</button><br />
             
-            <button id="delete-button" onClick={() => setCount(count - step)} disabled={count-step <0}>Delete Sale</button><br />
+            <button id="delete-button" onClick={() => setCount(count - step)} disabled={count-step < 0}>Delete Sale</button><br />
             
             <button id="reset-button" onClick={() => setCount(0)}>Reset Sale</button><br />
            
