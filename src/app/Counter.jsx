@@ -16,7 +16,7 @@ export default function Counter({initialCount=0, initialStep=1}) {
            
             <label> 
                 Step: 
-                <input type="number" value={step} onChange={(e) => setStep(Number(e.target.value))} />
+                <input type="number" value={step} onChange={(e) => setStep(Math.max(1, Number(e.target.value)))} />
             </label>
         </div>
     );
