@@ -2,7 +2,7 @@ import Counter from "./Counter";
 
 export default function Home() {
   return (
-    <main>
+    <main className="home-section">
       <h1>Sales Counter</h1>
 
       <h2>Default Counter</h2>
